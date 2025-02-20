@@ -7,18 +7,13 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <!-- Блок состояния подключения -->
         <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center">
             <TextBlock Text="Статус подключения:" FontWeight="Bold"/>
             <TextBlock x:Name="ConnectionStatusText" Text="Отключено" Margin="10,0,0,0" Foreground="Red"/>
             <Button x:Name="ConnectButton" Content="Подключиться" Width="120" Margin="20,0,0,0" Click="ConnectButton_Click"/>
             <Button x:Name="DisconnectButton" Content="Отключиться" Width="120" Margin="10,0,0,0" Click="DisconnectButton_Click"/>
         </StackPanel>
-
-        <!-- Вкладки -->
         <TabControl Grid.Row="1">
-            <!-- Вкладка получения курса -->
             <TabItem Header="Курс валют">
                 <StackPanel Margin="10">
                     <StackPanel Orientation="Horizontal">
@@ -48,13 +43,9 @@
 
                         <Button x:Name="GetExchangeRateButton" Content="Получить курс" Width="120" Margin="10,0,0,0" Click="GetExchangeRateButton_Click"/>
                     </StackPanel>
-
-                    <!-- Исправленное поле для отображения курса -->
                     <TextBlock x:Name="ExchangeRateText" Text="Курс: -" Margin="0,10,0,0" FontSize="14"/>
                 </StackPanel>
             </TabItem>
-
-            <!-- Вкладка конвертации -->
             <TabItem Header="Конвертация">
                 <StackPanel Margin="10">
                     <StackPanel Orientation="Horizontal">
